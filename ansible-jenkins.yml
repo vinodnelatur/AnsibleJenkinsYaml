@@ -87,7 +87,7 @@
 
   - name: Install Jenkins 
     hosts: jenkins
-    gather_facts: False
+    gather_facts: True
     tags: jenkins
     #tasks:
      # - name: wait
