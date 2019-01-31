@@ -98,6 +98,8 @@
 
     roles:
       - role: geerlingguy.java
+        vars:
+          ansible_distribution: RHEL
         become: yes
       - role: arjunkapur95.jenkinsrole
         become: yes
