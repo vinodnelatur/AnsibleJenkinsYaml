@@ -59,7 +59,7 @@
         local_action: lineinfile 
                       dest="/etc/ansible/hosts" 
                       regexp={{ item.public_ip }} 
-                      insertafter="[jenkins]"."\n" line={{ item.public_ip }}
+                      insertafter="[jenkins]"."\n" line='{{ item.public_ip }} ansible_ssh_user=ec2-user'
         with_items: '{{ec2.instances}}'
 
 
